@@ -237,7 +237,7 @@
                         <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
                             <div class="single-wedge">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="{{asset('assets/images/logo/logo-white.png')}}" alt=""></a>
+                                    <a href="index.html"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a>
                                 </div>
                                 <p class="about-text">Lorem ipsum dolor sit amet consectet adipisicing elit, sed do
                                     eiusmod templ incididunt ut labore et dolore magnaol aliqua Ut enim ad minim.
