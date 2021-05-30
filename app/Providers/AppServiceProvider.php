@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         //Model::all()->take(10)->get();
 
-        View::share('products', product::orderBy('id')->take(4)->get());
+        View::share('products', product::orderBy('id','desc')->take(4)->get());
        // View::share('products', product::orderBy('id')->get());
     }
 }
