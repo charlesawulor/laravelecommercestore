@@ -64,7 +64,7 @@
                                         <li><a href="index-2.html">Home 2</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown position-static"><a href="#">Shop <i
+                                <li class="dropdown position-static"><a href="/laravelecommercestore/public/shoppage/">Shop <i
                                             class="pe-7s-angle-down"></i></a>
                                     <ul class="mega-menu d-block">
                                         <li class="d-flex">

@@ -20,3 +20,5 @@ Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/homepage', 'HomeController@index')->name('homepage');
+
+Route::resource('shoppage','shopController');
