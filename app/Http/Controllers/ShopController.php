@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class ShopController extends Controller
 {
@@ -13,7 +14,9 @@ class ShopController extends Controller
      */
     public function index()
     {
-        return view('shoppage');
+       // return view('shoppage');
+       $products = product::orderBy('id','asc')->get();
+       return view('shoppage',compact ('products'));
     }
 
     /**
