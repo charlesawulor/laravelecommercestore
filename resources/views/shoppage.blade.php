@@ -79,7 +79,7 @@
                                                 <!-- Single Prodect -->
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="single-product.html" class="image">
+                                                        <a href="/laravelecommercestore/public/product/{{$product->id}}" class="image">
                                                             <img src="/laravelecommercestore/storage/app/public/{{$product->image}}"
                                                                 alt="Product" />
                                                             <img class="hover-image"
