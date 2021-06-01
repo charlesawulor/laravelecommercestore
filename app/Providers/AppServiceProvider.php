@@ -31,5 +31,6 @@ class AppServiceProvider extends ServiceProvider
 
         View::share('products', product::orderBy('id','desc')->take(4)->get());
        // View::share('products', product::orderBy('id')->get());
+      // View::share('product', product::orderBy('product_price')->get());
     }
 }

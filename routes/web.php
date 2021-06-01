@@ -24,3 +24,10 @@ Route::get('/homepage', 'HomeController@index')->name('homepage');
 Route::resource('shoppage','shopController');
 
 Route::resource('product','shopController');
+
+
+Route::get('/add-to-cart/{id}',[
+    'uses' => 'ShopController@getAddToCart',
+    'as' => 'product.addToCart'
+    
+    ]);

@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Cart;
-use App\Product;
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use Session;
-class ShopController extends Controller
+use Illuminate\Http\Request;
+
+use App\Product;
+
+use App\Http\Requests;
+
+
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +18,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-       // return view('shoppage');
-       $products = product::orderBy('id','asc')->get();
-       return view('shoppage',compact ('products'));
+        //
     }
 
     /**
@@ -49,8 +50,7 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        $products = product::find($id);
-        return view('product')->with('products',$products);
+        //
     }
 
     /**
@@ -86,19 +86,4 @@ class ShopController extends Controller
     {
         //
     }
-
-    public function getAddToCart(Request $request, $id) {
-        $product = Product::find($id);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        $cart->add($product, $product->id);
-     
-        $request->session()->put('cart',$cart);
-        return back();
-        //return redirect()->route('shoppage');
-       // dd($request->session()->get('cart'));
-        
-     }
-
-
 }
