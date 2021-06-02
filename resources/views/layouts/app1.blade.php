@@ -197,7 +197,7 @@
                             </a>
                             <!-- Single Wedge End -->
                             <a href="/laravelecommercestore/public/shoppingcart/"
-                                class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            class="header-action-btn header-action-btn-cart ">
                                 <i class="pe-7s-shopbag"></i>
                                 <span class="header-action-num"> {{Session::has('cart') ? Session::get('cart')->totalQty : ''}}  </span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
