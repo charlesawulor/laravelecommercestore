@@ -95,10 +95,21 @@ class ShopController extends Controller
      
         $request->session()->put('cart',$cart);
         return back();
-        //return redirect()->route('shoppage');
+        //return redirect()->route('product.addToCart');
        // dd($request->session()->get('cart'));
         
      }
+
+
+     public function getCart(){
+        if (!Session::has('cart')){
+             return view('shoppingcart');
+      
+      }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('shoppingcart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+      }
 
 
 }

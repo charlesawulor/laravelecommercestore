@@ -31,3 +31,5 @@ Route::get('/add-to-cart/{id}',[
     'as' => 'product.addToCart'
     
     ]);
+
+Route::get('/shoppingcart', 'ShopController@getCart')->name('shoppingcart');    

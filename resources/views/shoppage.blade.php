@@ -98,8 +98,9 @@
                                                             <a href="compare.html" class="action compare"
                                                                 title="Compare"><i class="pe-7s-refresh-2"></i></a>
                                                         </div>
-                                                        <button title="Add To Cart" class=" add-to-cart">Add
-                                                            To Cart</button>
+                                                        <a href="/laravelecommercestore/public/product/{{$product->id}}" title="Add To Cart" class=" add-to-cart">View Product</a>
+
+
                                                     </div>
                                                     <div class="content">
                                                         <span class="ratings">
@@ -119,8 +120,8 @@
                                             </div>
                                          @endforeach
                                          @endif
-
-
+                                      
+                                       
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="shop-list">
