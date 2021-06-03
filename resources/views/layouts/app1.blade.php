@@ -52,17 +52,14 @@
                 <div class="row">
                     <div class="col-auto align-self-center">
                         <div class="header-logo">
-                            <a href="index.html"><img src="{{asset('assets/images/logo/logo.png')}}" alt="Site Logo" /></a>
+                            <a href="http://localhost/laravelecommercestore/public/"><img src="{{asset('assets/images/logo/logo.png')}}" alt="Site Logo" /></a>
                         </div>
                     </div>
                     <div class="col align-self-center d-none d-lg-block">
                         <div class="main-menu">
                             <ul>
-                                <li class="dropdown"><a href="#">Home <i class="pe-7s-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                    </ul>
+                <li class="dropdown"><a href="http://localhost/laravelecommercestore/public/">Home </a>
+                                   
                                 </li>
                                 <li class="dropdown position-static"><a href="/laravelecommercestore/public/shoppage/">Shop <i
                                             class="pe-7s-angle-down"></i></a>
@@ -199,7 +196,7 @@
                             <a href="/laravelecommercestore/public/shoppingcart/"
                             class="header-action-btn header-action-btn-cart ">
                                 <i class="pe-7s-shopbag"></i>
-                                <span class="header-action-num"> {{Session::has('cart') ? Session::get('cart')->totalQty : ''}}  </span>
+                                <span class="header-action-num"> {{Session::has('cart') ? Session::get('cart')->totalQty : ''}} </span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
                             <a href="#offcanvas-mobile-menu"

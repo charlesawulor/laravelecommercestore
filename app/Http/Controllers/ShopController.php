@@ -112,4 +112,12 @@ class ShopController extends Controller
       }
 
 
+
+      public function getCheckout(){
+
+
+        return view('checkout');
+      }
+
+
 }

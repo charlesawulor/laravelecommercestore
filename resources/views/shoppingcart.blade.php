@@ -52,7 +52,7 @@
                                       <a href="#"><img class="img-responsive ml-15px"
                                               src="/laravelecommercestore/storage/app/public/{{$product['item']['image']}}" alt="" /></a>
                                   </td>
-                                  <td class="product-name"><a href="#">{{$product['item']['title']}}</a></td>
+                                  <td class="product-name"><a href="#">{{$product['item']['product_name']}}</a></td>
                                   <td class="product-price-cart"><span class="amount">${{$product['price']}}</span></td>
                                   <td class="product-price-cart"><span class="amount">{{$product['qty']}}</span></td>
                                  
@@ -144,9 +144,8 @@
                               <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
                           </div>
                           <h5>Total products <span>${{$totalPrice}}</span></h5>
-                         
-                          <h4 class="grand-totall-title">Grand Total <span>${{$totalPrice}}</span></h4>
-                          <a href="checkout.html">Proceed to Checkout</a>
+                        <h4 class="grand-totall-title">Grand Total <span>${{$totalPrice}}</span></h4>
+                          <a href="{{ route('checkout')}}">Proceed to Checkout</a>
                       </div>
                   </div>
               </div>
