@@ -209,10 +209,10 @@
                                 </div>
                                 <div class="your-order-middle">
                                     <ul>
-                                        <li><span class="order-middle-left">Product Name X 1</span> <span
-                                                class="order-price">$100 </span></li>
-                                        <li><span class="order-middle-left">Product Name X 1</span> <span
-                                                class="order-price">$100 </span></li>
+                                    @foreach($products as $product)
+                                        <li><span class="order-middle-left"> {{$product['item']['product_name']}} </span> <span
+                                                class="order-price">${{$product['price']}}</span></li>
+                                    @endforeach  
                                     </ul>
                                 </div>
                                 <div class="your-order-bottom">
@@ -224,7 +224,7 @@
                                 <div class="your-order-total">
                                     <ul>
                                         <li class="order-total">Total</li>
-                                        <li>$100</li>
+                                        <li>${{$totalPrice}}</li>
                                     </ul>
                                 </div>
                             </div>

@@ -104,8 +104,7 @@ class ShopController extends Controller
      public function getCart(){
         if (!Session::has('cart')){
              return view('shoppingcart');
-      
-      }
+        }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         return view('shoppingcart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
@@ -114,9 +113,13 @@ class ShopController extends Controller
 
 
       public function getCheckout(){
-
-
-        return view('checkout');
+        if (!Session::has('cart')){
+            return view('shoppingcart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
       }
 
 
