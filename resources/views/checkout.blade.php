@@ -43,6 +43,8 @@
                         <h3>Billing Details</h3>
                         <div class="row">
 
+                        <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''}}" > {{ Session::get('error')}} </div>
+                        
       <form action="{{route('checkout')}}" method="post" id="checkout-form">
                             <div class="col-lg-12">
                                 <div class="billing-info mb-4">
@@ -206,5 +208,6 @@
 @section('scripts')
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="{{ URL::to('src/js/checkout.js')}}"></script>
 
 @endsection
