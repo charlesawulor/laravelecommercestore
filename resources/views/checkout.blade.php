@@ -30,172 +30,71 @@
                     <div class="billing-info-wrap">
                         <h3>Billing Details</h3>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+
+      <form action="{{route('checkout')}}" method="post" id="checkout-form">
+                            <div class="col-lg-12">
                                 <div class="billing-info mb-4">
                                     <label>First Name</label>
-                                    <input type="text" />
+                                    <input type="text" id="name" />
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Last Name</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
+                            
+                           
                             <div class="col-lg-12">
                                 <div class="billing-info mb-4">
-                                    <label>Company Name</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="billing-select mb-4">
-                                    <label>Country</label>
-                                    <select>
-                                        <option>Select a country</option>
-                                        <option>Azerbaijan</option>
-                                        <option>Bahamas</option>
-                                        <option>Bahrain</option>
-                                        <option>Bangladesh</option>
-                                        <option>Barbados</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="billing-info mb-4">
-                                    <label>Street Address</label>
+                                    <label> Address</label>
                                     <input class="billing-address" placeholder="House number and street name"
-                                        type="text" />
-                                    <input placeholder="Apartment, suite, unit etc." type="text" />
+                                        type="text" id="address" />
+                                    
+                                </div>
+                            </div>
+                           
+                  
+
+                        
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Card Holder Name</label>
+                                    <input type="text" id="card-name" />
+                                </div>
+                            </div>
+                           <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Credit Card Number</label>
+                                    <input type="text" id="card-number" />
+                                </div>
+                            </div>
+                           <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Expiration Month</label>
+                                    <input type="text"  id="card-expirt-month" />
+                                </div>
+                            </div>
+                           <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Expiration Year</label>
+                                    <input type="text"  id="card-expirt-Year" />
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="billing-info mb-4">
-                                    <label>Town / City</label>
-                                    <input type="text" />
+                                    <label>Card CVC</label>
+                                    <input type="text"  id="card-cvc" />
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>State / County</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Postcode / ZIP</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Phone</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Email Address</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
+                          {{csrf_field()}}
+                             
+                             <button type="submit" class="btn btn-success" > Buy Now</button>
+
+                        </form>
+
                         </div>
-                        <div class="checkout-account mb-30px">
-                            <input class="checkout-toggle2 w-auto h-auto" type="checkbox" />
-                            <label>Create an account?</label>
-                        </div>
-                        <div class="checkout-account-toggle open-toggle2 mb-30">
-                            <input placeholder="Email address" type="email" />
-                            <input placeholder="Password" type="password" />
-                            <button class="btn-hover checkout-btn" type="submit">register</button>
-                        </div>
-                        <div class="additional-info-wrap">
-                            <h4>Additional information</h4>
-                            <div class="additional-info">
-                                <label>Order notes</label>
-                                <textarea placeholder="Notes about your order, e.g. special notes for delivery. "
-                                    name="message"></textarea>
-                            </div>
-                        </div>
-                        <div class="checkout-account mt-25">
-                            <input class="checkout-toggle w-auto h-auto" type="checkbox" />
-                            <label>Ship to a different address?</label>
-                        </div>
-                        <div class="different-address open-toggle mt-30px">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-4">
-                                        <label>First Name</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-4">
-                                        <label>Last Name</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-4">
-                                        <label>Company Name</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-select mb-4">
-                                        <label>Country</label>
-                                        <select>
-                                            <option>Select a country</option>
-                                            <option>Azerbaijan</option>
-                                            <option>Bahamas</option>
-                                            <option>Bahrain</option>
-                                            <option>Bangladesh</option>
-                                            <option>Barbados</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-4">
-                                        <label>Street Address</label>
-                                        <input class="billing-address" placeholder="House number and street name"
-                                            type="text" />
-                                        <input placeholder="Apartment, suite, unit etc." type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="billing-info mb-4">
-                                        <label>Town / City</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-4">
-                                        <label>State / County</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-4">
-                                        <label>Postcode / ZIP</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-4">
-                                        <label>Phone</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="billing-info mb-4">
-                                        <label>Email Address</label>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
+
+
+
                 <div class="col-lg-5 mt-md-30px mt-lm-30px ">
                     <div class="your-order-area">
                         <h3>Your order</h3>
