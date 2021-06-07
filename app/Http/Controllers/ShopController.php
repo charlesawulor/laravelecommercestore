@@ -1,11 +1,17 @@
 <?php
 
+//use Stripe\Charge;
+use Stripe\Stripe;
 namespace App\Http\Controllers;
 use App\Cart;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Session;
+//use App\Http\Controllers\Stripe;
+
+//require_once('/path/to/stripe-php/init.php');
+
 class ShopController extends Controller
 {
     /**
@@ -121,6 +127,33 @@ class ShopController extends Controller
         $total = $cart->totalPrice;
         return view('checkout', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
       }
+
+
+      public function postCheckout(Request $request)
+      {
+          if (!Session::has('cart')){
+             return redirect()->route('shoppingcart');
+         }
+         $oldCart = Session::get('cart');
+         $cart = new Cart($oldCart);
+         
+         Stripe::setApiKey('sk_test_51Io4hXACLwpJgLfCVSFzJMfIoYRSfnzavlSQIMDzzaTnwziz6vtwrCyGutVROodumwZabXSPvFDC9Q6GKyf8Mz3w002rLASPxn');
+         try {
+             Stripe::create(array(
+              "amount" => $cart->totalPrice * 100,
+              "currency" => "usd",
+              "source" => $request->input('stripeToken'),
+              "description" => "Charge for fashion store"
+              ));
+           } catch (\Exception $e){
+               return redirect()->route('checkout')->with('error',$e->getMessage());
+            }
+            Session::forget('cart');
+            return redirect()->route('shoppage')->with('success', 'Payment successful');
+          } 
+         
+      
+    
 
 
 }
