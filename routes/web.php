@@ -12,18 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('homepage');
-});
+   return view('home');   
+   });
 
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/homepage', 'HomeController@index')->name('homepage');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('shoppage','shopController');
 
-Route::resource('product','shopController');
+
+Route::get('/shoppage', 'ShopController@index')->name('shoppage'); 
+
+Route::resource('product','ShopController');
 
 
 Route::get('/add-to-cart/{id}',[
