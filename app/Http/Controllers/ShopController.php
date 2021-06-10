@@ -144,7 +144,7 @@ class ShopController extends Controller
               "amount" => $cart->totalPrice * 100,
               "currency" => "usd",
               "source" =>'tok_visa', //use this for test cards
-              "source" => $request->input('stripeToken'), // use this for real cards when In production
+             // "source" => $request->input('stripeToken'), // use this for real cards when In production
               "description" => "Charge for fashion store"
               ));
            } catch (\Exception $e){
