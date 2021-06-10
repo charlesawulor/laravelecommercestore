@@ -81,13 +81,13 @@
                            <div class="col-lg-12">
                                 <div class="billing-info mb-4">
                                     <label>Expiration Month</label>
-                                    <input type="text"  id="card-expirt-month" />
+                                    <input type="text"  id="card-expiry-month" />
                                 </div>
                             </div>
                            <div class="col-lg-12">
                                 <div class="billing-info mb-4">
                                     <label>Expiration Year</label>
-                                    <input type="text"  id="card-expirt-Year" />
+                                    <input type="text"  id="card-expiry-Year" />
                                 </div>
                             </div>
                             <div class="col-lg-12">
