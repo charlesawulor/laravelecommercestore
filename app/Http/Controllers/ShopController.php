@@ -1,13 +1,14 @@
 <?php
 
-//use Stripe\Charge;
-use Stripe\Stripe;
 namespace App\Http\Controllers;
 use App\Cart;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Session;
+use Stripe\Charge;
+use Stripe\Stripe;
+
 //use App\Http\Controllers\Stripe;
 
 //require_once('/path/to/stripe-php/init.php');
@@ -137,12 +138,13 @@ class ShopController extends Controller
          $oldCart = Session::get('cart');
          $cart = new Cart($oldCart);
          
-         Stripe::setApiKey('sk_test_51Io4hXACLwpJgLfCVSFzJMfIoYRSfnzavlSQIMDzzaTnwziz6vtwrCyGutVROodumwZabXSPvFDC9Q6GKyf8Mz3w002rLASPxn');
+   Stripe::setApiKey('sk_test_51Io4hXACLwpJgLfCVSFzJMfIoYRSfnzavlSQIMDzzaTnwziz6vtwrCyGutVROodumwZabXSPvFDC9Q6GKyf8Mz3w002rLASPxn');
          try {
-             Stripe::create(array(
+            Charge::create(array(
               "amount" => $cart->totalPrice * 100,
               "currency" => "usd",
-              "source" => $request->input('stripeToken'),
+              "source" =>'tok_visa', //use this for test cards
+              "source" => $request->input('stripeToken'), // use this for real cards when In production
               "description" => "Charge for fashion store"
               ));
            } catch (\Exception $e){
@@ -154,6 +156,4 @@ class ShopController extends Controller
          
       
     
-
-
 }
