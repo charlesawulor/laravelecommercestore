@@ -139,7 +139,7 @@ class ShopController extends Controller
          
    Stripe::setApiKey('sk_test_51Io4hXACLwpJgLfCVSFzJMfIoYRSfnzavlSQIMDzzaTnwziz6vtwrCyGutVROodumwZabXSPvFDC9Q6GKyf8Mz3w002rLASPxn');
          try {
-            $charge=Charge::create(array(
+           $charge = Charge::create(array(
               "amount" => $cart->totalPrice * 100,
               "currency" => "usd",
               "source" =>'tok_visa', //use this for test cards
@@ -156,7 +156,7 @@ class ShopController extends Controller
                return redirect()->route('checkout')->with('error',$e->getMessage());
             }
             Session::forget('cart');
-            return redirect()->route('shoppage')->with('success', 'Payment successful');
+            return redirect()->route('ordercomplete')->with('success', 'Payment successful');
           } 
          
       
