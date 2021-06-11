@@ -48,8 +48,8 @@
       <form action="{{route('checkout')}}" method="post" id="checkout-form">
                             <div class="col-lg-12">
                                 <div class="billing-info mb-4">
-                                    <label>First Name</label>
-                                    <input type="text" id="name" />
+                                    <label>Full Name</label>
+                                    <input type="text" id="name" name="name" />
                                 </div>
                             </div>
                             
@@ -58,7 +58,7 @@
                                 <div class="billing-info mb-4">
                                     <label> Address</label>
                                     <input class="billing-address" placeholder="House number and street name"
-                                        type="text" id="address" />
+                                        type="text" id="address" name="address" />
                                     
                                 </div>
                             </div>

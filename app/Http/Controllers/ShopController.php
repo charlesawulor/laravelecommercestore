@@ -6,6 +6,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Session;
+use Auth;
 use Stripe\Charge;
 use Stripe\Stripe;
 use App\Order;
@@ -138,13 +139,19 @@ class ShopController extends Controller
          
    Stripe::setApiKey('sk_test_51Io4hXACLwpJgLfCVSFzJMfIoYRSfnzavlSQIMDzzaTnwziz6vtwrCyGutVROodumwZabXSPvFDC9Q6GKyf8Mz3w002rLASPxn');
          try {
-            Charge::create(array(
+            $charge=Charge::create(array(
               "amount" => $cart->totalPrice * 100,
               "currency" => "usd",
               "source" =>'tok_visa', //use this for test cards
-             // "source" => $request->input('stripeToken'), // use this for real cards when In production
+           // "source" => $request->input('stripeToken'), // use this for real cards when In production
               "description" => "Charge for fashion store"
               ));
+              $order = new Order();
+              $order->cart = serialize($cart);
+              $order->address = $request->input('address');
+              $order->name = $request->input('name');
+              $order->payment_id = $charge->id;
+              Auth::user()->orders()->save($order);
            } catch (\Exception $e){
                return redirect()->route('checkout')->with('error',$e->getMessage());
             }
