@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Session;
 use Stripe\Charge;
 use Stripe\Stripe;
+use App\Order;
 
 //use App\Http\Controllers\Stripe;
 
@@ -98,15 +99,12 @@ class ShopController extends Controller
         $product = Product::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
-        $cart->add($product, $product->id);
-     
+        $cart->add($product, $product->id);   
         $request->session()->put('cart',$cart);
-        return back();
-        //return redirect()->route('product.addToCart');
-       // dd($request->session()->get('cart'));
-        
+        return back();         
      }
-
+ //return redirect()->route('product.addToCart');
+       // dd($request->session()->get('cart')); 
 
      public function getCart(){
         if (!Session::has('cart')){
