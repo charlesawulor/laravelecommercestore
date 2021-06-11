@@ -98,7 +98,7 @@
                             </div>
                           {{csrf_field()}}
                              
-                             <button type="submit" class="btn btn-success" > Buy Now</button>
+                             <button style="width:100%; height:50px; border-radius:1px solid #fb5d5d; background-color:#fb5d5d; color:white; font-weight: 700" type="submit" > PAY ${{$totalPrice}}</button>
 
                         </form>
 
@@ -128,12 +128,7 @@
                                     @endforeach  
                                     </ul>
                                 </div>
-                                <div class="your-order-bottom">
-                                    <ul>
-                                        <li class="your-order-shipping">Shipping</li>
-                                        <li>Free shipping</li>
-                                    </ul>
-                                </div>
+                            
                                 <div class="your-order-total">
                                     <ul>
                                         <li class="order-total">Total</li>
@@ -141,61 +136,9 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="payment-method">
-                                <div class="payment-accordion element-mrg">
-                                    <div id="faq" class="panel-group">
-                                        <div class="panel panel-default single-my-account m-0">
-                                            <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse"
-                                                        href="#my-account-1" class="collapsed"
-                                                        aria-expanded="true">Direct bank transfer</a>
-                                                </h4>
-                                            </div>
-                                            <div id="my-account-1" class="panel-collapse collapse show"
-                                                data-bs-parent="#faq">
-
-                                                <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town,
-                                                        Store State / County, Store Postcode.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default single-my-account m-0">
-                                            <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse"
-                                                        href="#my-account-2" aria-expanded="false"
-                                                        class="collapsed">Check payments</a></h4>
-                                            </div>
-                                            <div id="my-account-2" class="panel-collapse collapse"
-                                                data-bs-parent="#faq">
-
-                                                <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town,
-                                                        Store State / County, Store Postcode.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default single-my-account m-0">
-                                            <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse"
-                                                        href="#my-account-3">Cash on delivery</a></h4>
-                                            </div>
-                                            <div id="my-account-3" class="panel-collapse collapse"
-                                                data-bs-parent="#faq">
-
-                                                <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town,
-                                                        Store State / County, Store Postcode.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                       
                         </div>
-                        <div class="Place-order mt-25">
-                            <a class="btn-hover" href="#">Place Order</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
