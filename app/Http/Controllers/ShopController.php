@@ -151,8 +151,8 @@ class ShopController extends Controller
               $order->address = $request->input('address');
               $order->name = $request->input('name');
               $order->payment_id = $charge->id;
-              Auth::user()->orders()->save($order);
-           } catch (\Exception $e){
+              Auth::user()->orders()->save($order);            
+             } catch (\Exception $e){
                return redirect()->route('checkout')->with('error',$e->getMessage());
             }
             Session::forget('cart');

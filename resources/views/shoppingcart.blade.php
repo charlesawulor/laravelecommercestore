@@ -102,7 +102,13 @@
 </div>
 
 @else
-   <h2> No Item In Cart</h2>
+ <div style="background-color:white" class="grand-totall">
+   <h2 style="text-align:center"> No Item In Cart</h2>
+   <br>
+   <br>
+      <a style="width:20%; margin: auto" href="{{route('shoppage')}}">SHOP NOW</a>  
+   </div>
+   
 
 @endif
 
