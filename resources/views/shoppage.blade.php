@@ -79,7 +79,7 @@
                                                 <!-- Single Prodect -->
                                                 <div class="product">
                                                     <div class="thumb">
-                                                        <a href="product/{{$product->id}}" class="image">
+                          <a href="product/{{$product->id}}" class="image">
                                                             <img src="/laravelecommercestore/storage/app/public/{{$product->image}}"
                                                                 alt="Product" />
                                                             <img class="hover-image"
@@ -640,10 +640,7 @@
                         <!-- Tab Content Area End -->
 
                         <!--  Pagination Area Start -->
-                        <div class="load-more-items text-center mt-30px0px" data-aos="fade-up">
-                            <a href="#" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Load More <i
-                                    class="fa fa-refresh ml-15px" aria-hidden="true"></i></a>
-                        </div>
+                    
                         <!--  Pagination Area End -->
                     </div>
                     <!-- Shop Bottom Area End -->
