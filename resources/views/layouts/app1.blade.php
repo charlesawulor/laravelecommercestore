@@ -149,8 +149,7 @@
                                 <div class="footer-logo">
                                     <a href="index.html"><img src="{{asset('assets/images/logo/logo.png')}}" alt=""></a>
                                 </div>
-                                <p class="about-text">Lorem ipsum dolor sit amet consectet adipisicing elit, sed do
-                                    eiusmod templ incididunt ut labore et dolore magnaol aliqua Ut enim ad minim.
+                                <p class="about-text">About text here
                                 </p>
                                 <ul class="link-follow">
                                     <li>
@@ -219,8 +218,7 @@
                                 <div class="footer-links">
                                     <div class="footer-row">
                                         <ul class="align-items-center">
-                                            <li class="li"><a class="single-link" href="index.html">Jesco</a>
-                                            </li>
+                                        
                                             <li class="li"><a class="single-link" href="shop-left-sidebar.html">Shop</a></li>
                                             <li class="li"><a class="single-link" href="contact.html">Contact us</a></li>
                                             <li class="li"><a class="single-link" href="login.html">Log in</a></li>
@@ -256,9 +254,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <p class="copy-text"> © 2021 <strong>Jesco</strong> Made With <i class="fa fa-heart"
-                                    aria-hidden="true"></i> By <a class="company-name" href="https://hasthemes.com/">
-                                    <strong> HasThemes</strong></a>.</p>
+                            <p class="copy-text"> © 2021 <strong>By Charles Awulor</strong><i class=""
+                                    aria-hidden="true"></i>-<a class="company-name" href="https://www.linkedin.com/in/charles-awulor-315363100/">
+                                    <strong>Click here to open LinkedIn Profile </strong></a>.</p>
                         </div>
                     </div>
                 </div>
