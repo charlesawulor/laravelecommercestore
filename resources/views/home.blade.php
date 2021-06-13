@@ -226,7 +226,7 @@
                                 <span class="category">Offer 2021</span>
                                 <h2 class="title-1">Sale Up To </h2>
                                 <h2 class="title-2"><span>50%</span> Off</h2>
-                                <a href="shop-left-sidebar.html" class="btn btn-lg btn-primary btn-hover-dark"> Shop Now <i
+                                <a href="{{route('shoppage')}}" class="btn btn-lg btn-primary btn-hover-dark"> Shop Now <i
                                         class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                                     <div class="content-side">
                                         <h4 class="title">Full Dress</h4>
                                         <span class="price">$21.00</span>
-                                        <a href="shop-left-sidebar.html" class="shop-link">Shop Now</a>
+                                        <a href="{{route('shoppage')}}" class="shop-link">Shop Now</a>
                                     </div>
                                     <div class="image-side">
                                         <img src="assets/images/slider-image/display-image.png" alt="">
@@ -260,7 +260,7 @@
                                 <span class="category">Offer 2021</span>
                                 <h2 class="title-1">Sale Up To </h2>
                                 <h2 class="title-2"><span>50%</span> Off</h2>
-                                <a href="shop-left-sidebar.html" class="btn btn-lg btn-primary btn-hover-dark"> Shop Now <i
+                                <a href="{{route('shoppage')}}" class="btn btn-lg btn-primary btn-hover-dark"> Shop Now <i
                                         class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                                     <div class="content-side">
                                         <h4 class="title">Full Dress</h4>
                                         <span class="price">$21.00</span>
-                                        <a href="shop-left-sidebar.html" class="shop-link">Shop Now</a>
+                                        <a href="{{route('shoppage')}}" class="shop-link">Shop Now</a>
                                     </div>
                                     <div class="image-side">
                                         <img src="assets/images/slider-image/display-image.png" alt="">
