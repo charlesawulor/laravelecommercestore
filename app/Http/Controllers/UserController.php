@@ -10,6 +10,17 @@ use Auth;
 
 class UserController extends Controller
 {
+
+      public function getProfile() {
+        $orders = Auth::user()->orders;
+        $orders->transform(function($order, $key){
+        $order->cart = unserialize($order->cart);
+         return $order;
+        });
+        return view('my-orders', ['orders' => $orders]);
+       }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -87,12 +98,5 @@ class UserController extends Controller
     }
 
 
-      public function getProfile() {
-        $orders = Auth::user()->orders;
-        $orders->transform(function($order, $key){
-        $order->cart = unserialize($order->cart);
-         return $order;
-        });
-        return view('my-orders', ['orders' => $orders]);
-       }
+     
 }
