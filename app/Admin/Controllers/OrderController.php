@@ -27,13 +27,13 @@ class OrderController extends AdminController
         $grid = new Grid(new Order());
 
         $grid->column('id', __('Id'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
         $grid->column('user_id', __('User id'));
         $grid->column('cart', __('Cart'));
         $grid->column('address', __('Address'));
         $grid->column('name', __('Name'));
         $grid->column('payment_id', __('Payment id'));
+        $grid->column('created_at', __('Created at'));
+        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -49,13 +49,13 @@ class OrderController extends AdminController
         $show = new Show(Order::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
         $show->field('user_id', __('User id'));
         $show->field('cart', __('Cart'));
         $show->field('address', __('Address'));
         $show->field('name', __('Name'));
         $show->field('payment_id', __('Payment id'));
+        $show->field('created_at', __('Created at'));
+        $show->field('updated_at', __('Updated at'));
 
         return $show;
     }

@@ -36,8 +36,15 @@ Route::get('/add-to-cart/{id}',[
 
 Route::get('/shoppingcart', 'ShopController@getCart')->name('shoppingcart'); 
 
-Route::get('/checkout', 'ShopController@getCheckout')->name('checkout'); 
+//Route::get('/checkout', 'ShopController@getCheckout')->name('checkout'); 
 
 Route::post('/checkout', 'ShopController@postCheckout')->name('checkout'); 
+
+Route::get('/checkout',[
+    'uses' => 'ShopController@postCheckout',
+     'as' => 'checkout',
+     'middleware' => 'auth'
+]);
+
 
 Route::get('/ordercomplete', 'ShopController@postCheckout')->name('ordercomplete'); 
