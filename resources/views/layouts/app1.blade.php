@@ -84,7 +84,10 @@
                            <p class="header-action-btn login-btn" data-bs-toggle="modal"
                                 data-bs-target="#loginActive">Welcome, {{ Auth::user()->name }} </p>
 
-                                <div>
+                                <a href="{{ route('my-orders') }}" class="header-action-btn login-btn"                            
+                                      >My Orders</a>
+
+                            <div>
                                 <a href="login.html" class="header-action-btn login-btn" data-bs-toggle="modal"
                                 data-bs-target="#loginActive" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

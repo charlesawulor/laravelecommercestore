@@ -41,3 +41,8 @@ Route::get('/checkout', 'ShopController@getCheckout')->name('checkout')->middlew
 Route::post('/checkout', 'ShopController@postCheckout')->name('checkout'); 
 
 Route::get('/ordercomplete', 'ShopController@postCheckout')->name('ordercomplete'); 
+
+Route::get('/my-orders', 'UserController@getProfile')->name('my-orders'); 
+
+
+//Route::resource('my-orders','UserController');
