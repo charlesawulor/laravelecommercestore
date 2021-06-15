@@ -1473,7 +1473,7 @@
                         <div class="deal-timing">
                             <div data-countdown="2021/05/15"></div>
                         </div>
-                        <a href="single-product-variable.html" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
+                        <a href="{{route('shoppage')}}" class="btn btn-lg btn-primary btn-hover-dark m-auto"> Shop
                             Now <i class="fa fa-shopping-basket ml-15px" aria-hidden="true"></i></a>
                     </div>
                     <div class="deal-image">

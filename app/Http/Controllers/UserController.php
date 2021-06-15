@@ -11,11 +11,13 @@ use Auth;
 class UserController extends Controller
 {
 
-      public function getProfile() {
+  public function getProfile() 
+      {
         $orders = Auth::user()->orders;
-        $orders->transform(function($order, $key){
+        $orders->transform(function($order, $key)
+        {
         $order->cart = unserialize($order->cart);
-         return $order;
+        return $order;
         });
         return view('my-orders', ['orders' => $orders]);
        }
