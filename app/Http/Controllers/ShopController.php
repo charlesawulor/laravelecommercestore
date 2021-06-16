@@ -103,7 +103,28 @@ class ShopController extends Controller
         $cart->add($product, $product->id);   
         $request->session()->put('cart',$cart);
         return back();         
-     }
+    }
+
+    public function getReduceByOne($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->reduceByOne($id);
+        
+        Session::put('cart', $cart);
+        return back(); 
+    }
+
+    public function getRemoveItem($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+        
+        Session::put('cart', $cart);
+        return back(); 
+    }
+
+
+
  //return redirect()->route('product.addToCart');
        // dd($request->session()->get('cart')); 
 

@@ -34,6 +34,19 @@ Route::get('/add-to-cart/{id}',[
     
     ]);
 
+
+Route::get('/reduce/{id}',[
+        'uses' => 'ShopController@getReduceByOne',
+        'as' => 'product.reduceByOne'     
+    ]);
+    
+Route::get('/remove/{id}',[
+        'uses' => 'ShopController@getRemoveItem',
+        'as' => 'product.remove'
+        ]);
+
+
+
 Route::get('/shoppingcart', 'ShopController@getCart')->name('shoppingcart'); 
 
 Route::get('/checkout', 'ShopController@getCheckout')->name('checkout')->middleware('auth'); 

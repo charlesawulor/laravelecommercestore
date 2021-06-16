@@ -47,6 +47,7 @@
                           </thead>
                           <tbody>
                           @foreach($products as $product)
+                       
                               <tr>
                                   <td class="product-thumbnail">
                                       <a href="#"><img class="img-responsive ml-15px"
@@ -57,11 +58,38 @@
                                   <td class="product-price-cart"><span class="amount">{{$product['qty']}}</span></td>
                                  
                                   <td class="product-remove">
-                                      <a href="#"><i class="fa fa-pencil"></i></a>
-                                      <a href="#"><i class="fa fa-times"></i></a>
+                                      <a href="{{ route('product.reduceByOne', ['id'=>$product['item']['id']])}}">Remove One</a>
+
+                                      <a href="{{ route('product.remove', ['id'=>$product['item']['id']])}}">Remove All</a>
                                   </td>
                               </tr>
+                           
+                        
+
                              @endforeach
+
+                             
+                           <tr>  
+                               <td>
+                                   
+                                   </td>
+
+                                   <td>
+                                 
+                                   </td>
+                                   <td>
+                                  
+                                   </td>
+                                   <td>
+                                   <h4 class="grand-totall-title"> <b>Grand Total : </b></h4>
+                                  </td>
+
+                              <td>
+                              <h4 class="grand-totall-title"><b> <span>${{$totalPrice}}</span> </b> </h4>
+                             </td>
+                              
+
+                           </tr>
                          
                           </tbody>
                       </table>
@@ -86,16 +114,17 @@
 
                   <div class="col-lg-8 col-md-12 mt-md-30px">
                       <div class="grand-totall">
-                          <div class="title-wrap">
+                         <!--  <div class="title-wrap">
                               <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
-                          </div>
-                          <h5>Total products <span>${{$totalPrice}}</span></h5>
-                        <h4 class="grand-totall-title">Grand Total <span>${{$totalPrice}}</span></h4>
+                          </div> -->
+                        <!--   <h5>Total products <span>${{$totalPrice}}</span></h5>-->
+                        <!-- <h4 class="grand-totall-title">Grand Total <span>${{$totalPrice}}</span></h4>-->
                           <a href="{{ route('checkout')}}">Proceed to Checkout</a>
                       </div>
                   </div>
 
               </div>
+
           </div>
       </div>
   </div>
