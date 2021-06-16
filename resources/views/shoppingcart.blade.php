@@ -39,7 +39,7 @@
                               <tr>
                                   <th>Image</th>
                                   <th>Product Name</th>
-                                  <th>Until Price</th>
+                                  <th>Sub Total</th>
                                   <th>Qty</th>
                                
                                   <th>Action</th>

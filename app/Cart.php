@@ -10,14 +10,13 @@ class Cart
 
 
     public function __construct($oldCart)
-    {
+      {
     if ($oldCart) {
     $this->items = $oldCart->items;
     $this->totalQty = $oldCart->totalQty;
     $this->totalPrice = $oldCart->totalPrice;
+    }
    }
-   }
-
 
    
     public function add($item, $id){
@@ -51,8 +50,8 @@ class Cart
     }
 
     public function removeItem($id) {
-      $this->totalQty-= $this->items[$id]['qty'];
-      $this->totalPrice -= $this->items[$id]['item']['price'];
+      $this->totalQty -= $this->items[$id]['qty'];
+      $this->totalPrice -= $this->items[$id]['item']['product_price'];
       unset($this->items[$id]);
     }
 
