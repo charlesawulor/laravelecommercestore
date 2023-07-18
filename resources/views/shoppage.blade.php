@@ -3,6 +3,50 @@
 
 @section('content')
 
+<div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+    <button class="offcanvas-close"></button>
+
+    <div class="inner customScroll">
+
+        <div class="offcanvas-menu mb-4">
+            <ul>
+                <li><a href="/laravelecommercestore/public/"><span class="menu-text">Home</span></a>
+                  
+                </li>
+                <li><a href="{{route('shoppage')}}"><span class="menu-text">Shop</span></a>
+                  
+                </li>
+                <li><a href="#"><span class="menu-text">Blog</span></a>
+                 
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- OffCanvas Menu End -->
+        <div class="offcanvas-social mt-auto">
+            <ul>
+                <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 
     <!-- breadcrumb-area start -->
     <div class="breadcrumb-area">

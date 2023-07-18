@@ -105,8 +105,8 @@ class ShopController extends Controller
         return back();         
     }
 
-    public function getReduceByOne($id) {
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+    public function getReduceByOne($id) { 
+         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->reduceByOne($id);
         if (count($cart->items) > 0){
@@ -116,17 +116,6 @@ class ShopController extends Controller
              }
         return back(); 
     }
-
-
-
-   // public function getRemoveItem($id) {
-      //  $oldCart = Session::has('cart') ? Session::get('cart') : null;
-      //  $cart = new Cart($oldCart);
-      //  $cart->removeItem($id);
-        
-      //  Session::put('cart', $cart);
-      //  return back(); 
-    //}
 
 
     public function getRemoveItem($id) {
@@ -142,9 +131,6 @@ class ShopController extends Controller
     }
 
 
-
- //return redirect()->route('product.addToCart');
-       // dd($request->session()->get('cart')); 
 
      public function getCart(){
         if (!Session::has('cart')){
